@@ -3,22 +3,38 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
  module.exports = {
     mode: "development",
-    entry: "./src/index.js",
-    output: {
-      filename: "main.js",
-      path: path.resolve(__dirname, "dist"),
-      clean: true,
+    entry: {
+      // navigation: './src/navigation.js',
+      home: './src/home.js',
+      menu: './src/menu.js',
+      about: './src/about.js',
+      navigation: './src/navigation.js'
     },
-    devtool: "eval-source-map",
-    devServer: {
-      watchFiles: ["./src/template.html"],
+    output: {
+      filename: '[name].bundle.js',
+      path: path.resolve(__dirname, 'dist'),
+      clean: true
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'Resto Home Page',
-        template: "./src/template.html",
+        template: './src/home.html',
+        filename: 'index.html',
+        // chunks: ['home']
+        chunks: ['navigation', 'home']
       }),
-    ],      
+      new HtmlWebpackPlugin({
+        template: './src/menu.html',
+        filename: 'menu.html',
+        // chunks: ['menu']
+        chunks: ['navigation', 'menu']
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/about.html',
+        filename: 'about.html',
+        // chunks: ['about']
+        chunks: ['navigation', 'about']
+      })
+    ],   
     module: {
       rules: [
         {
@@ -31,6 +47,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
         },
       ],
     },
+    // optimization: {
+    //   splitChunks: {
+    //     chunks: 'all',
+    //   },
+    // },
 
  };
 

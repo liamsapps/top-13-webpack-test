@@ -1,3 +1,5 @@
+import { setupNavigation } from './navigation.js';
+
 import './style.css';
 import imgPastaMeatballs1 from "./images/pasta_meatballs.png";
 import imgOvenPizza2 from "./images/oven-pizza.jpg";
@@ -6,11 +8,11 @@ import imgSaladDish4 from "./images/salad-dish.jpg";
 import imgCiabattaBread5 from "./images/ciabatta-bread.jpg";
 import imgWineBottleGlass6 from "./images/wine-bottle-glass.jpg";
    
-console.log("In index.js test message!");
+console.log("In home.js test message!");
 
 function addContent() {
     const content = document.querySelector("#content");
-
+    
     // TOP DIV
     const topDiv = document.createElement("div");
     topDiv.className = "home-images";
@@ -61,12 +63,10 @@ function addContent() {
     content.appendChild(topDiv);
     content.appendChild(middleDiv);
     content.appendChild(bottomDiv);
-
-    // const images = document.querySelectorAll('img');
-    // images.forEach((img, i) => {
-    //     if (i < 6) img.className = 'home-images';
-    // });    
+    
 }
 
-// document.content.appendChild(addContent());
-document.body.appendChild(addContent());
+document.addEventListener('DOMContentLoaded', () => {
+    addContent();
+    setupNavigation(); 
+});
