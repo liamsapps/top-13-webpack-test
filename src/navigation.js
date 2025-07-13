@@ -1,4 +1,4 @@
-// Handle header button clicks for all pages
+// Handle header button clicks 
 export function setupNavigation() {
   const homeBtn = document.querySelector('#home-btn');  
   const menuBtn = document.querySelector('#menu-btn');  
@@ -16,3 +16,4 @@ export function setupNavigation() {
     window.location.href = 'about.html';
   });
 }
+

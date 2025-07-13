@@ -1,60 +1,56 @@
 import { setupNavigation } from './navigation.js';
+import { setupMenuNavigation } from './menuNavigation.js';
 
 import './style.css';
-// import imgPastaMeatballs1 from "./images/pasta_meatballs.png";
-// import imgOvenPizza2 from "./images/oven-pizza.jpg";
-// import imgPenneBroccoli3 from "./images/penne_broccoli.png";
-// import imgSaladDish4 from "./images/salad-dish.jpg";
-// import imgCiabattaBread5 from "./images/ciabatta-bread.jpg";
-// import imgWineBottleGlass6 from "./images/wine-bottle-glass.jpg";
-   
+
 console.log("In menu.js test message!");
 
-function addContent() {
-    const content = document.querySelector("#content");
+export function addContent() {
+    const content = document.querySelector("#content");    
 
-    // TOP DIV
-    const topDiv = document.createElement("div");
-    topDiv.className = "home-images";
+    // MENU NAV - ensure buttons only created once
+    if (!document.querySelector('#menu-heading') && !document.querySelector('.menu-nav')) {
+        const h1 = document.createElement("h1");
+        h1.id = "menu-heading";
+        h1.textContent = "Alberto's Eatery - Menu";
 
-    const dummyContent1 = document.createElement("p");
-    dummyContent1.textContent = "ALBERTO'S MENU - START";
+        content.appendChild(h1);
 
-    topDiv.appendChild(dummyContent1);
-    
-    // MIDDLE DIV
-    const middleDiv = document.createElement("div");
-    middleDiv.id = "home-middle";
+        const menuNav = document.createElement("nav");
+        menuNav.className = "menu-nav";
 
-    const h1 = document.createElement("h1");
-    h1.textContent = "Welcome to Alberto's Eatery";
+        // MENU NAV - NAV BUTTONS
+        const saladsBtn = document.createElement("button");
+        saladsBtn.id = "salads-btn";
+        saladsBtn.textContent = "Salads";
 
-    const para1 = document.createElement("p");
-    para1.textContent = "Authentic Italian flavors, crafted with passion. Enjoy handmade pasta, wood-fired pizzas, and classic dishes made from family recipes. Fresh ingredients, warm hospitality—just like Nonna's kitchen.";
+        const pastaBtn = document.createElement("button");
+        pastaBtn.id = "pasta-btn";
+        pastaBtn.textContent = "Pasta";
 
-    const para2 = document.createElement("p");
-    para2.textContent = "Buon appetito!";
+        const pizzaBtn = document.createElement("button");
+        pizzaBtn.id = "pizza-btn";
+        pizzaBtn.textContent = "Pizza";
 
-    middleDiv.appendChild(h1);
-    middleDiv.appendChild(para1);
-    middleDiv.appendChild(para2);
+        const dessertsBtn = document.createElement("button");
+        dessertsBtn.id = "desserts-btn";
+        dessertsBtn.textContent = "Desserts";
 
-    // BOTTOM DIV
-    const bottomDiv = document.createElement("div");
-    bottomDiv.className = "home-images";
+        const wineBtn = document.createElement("button");
+        wineBtn.id = "wine-btn";
+        wineBtn.textContent = "Wine";
 
-    const dummyContent2 = document.createElement("p");
-    dummyContent2.textContent = "ALBERTO'S MENU - END";
-
-    bottomDiv.appendChild(dummyContent2);
-    
-    content.appendChild(topDiv);
-    content.appendChild(middleDiv);
-    content.appendChild(bottomDiv);
-   
+        menuNav.appendChild(saladsBtn);
+        menuNav.appendChild(pastaBtn);
+        menuNav.appendChild(pizzaBtn);
+        menuNav.appendChild(dessertsBtn);
+        menuNav.appendChild(wineBtn);
+        content.appendChild(menuNav);    
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     addContent();
     setupNavigation();
+    setupMenuNavigation();
 });
