@@ -1,0 +1,54 @@
+/* MENU PAGE - START */
+#content > nav {      
+    display: flex;
+    justify-content: center;    
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+#content > nav > button {    
+    width: 12rem;
+    background-color: red;
+    color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;    
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+#content > h1 {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#content > p:first-of-type {    
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#content > .menu-items {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr 1fr);
+    grid-auto-rows: auto;
+    gap: 1rem;
+}
+
+/* align menu item prices to end of cell (right) */
+/* Target every 2nd and 4th cell in each row */
+#content > .menu-items > div:nth-child(4n+2),  /* 2nd cell in each row */
+#content > .menu-items > div:nth-child(4n+4) {  /* 4th cell in each row */
+  justify-self: end;  /* Align content to the right */
+  font-weight: bold;
+}
+
+#content > .menu-items > * {
+    margin: 0.5rem 1rem;
+}
+
+#content > .menu-items > .menu-item > p {
+    font-size: 1.5rem
+}
+/* MENU PAGE - END */
+

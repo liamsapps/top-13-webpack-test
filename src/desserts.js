@@ -2,7 +2,7 @@
 // import { setupMenuNavigation } from './menuNavigation.js';
 import { addContent } from './menu.js';
 
-import './style.css';
+// import './style.css';
 
 console.log("In desserts.js test message!");
 
@@ -153,9 +153,14 @@ function addDessertsContent() {
     
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    addContent();
-    // setupNavigation();
-    // setupMenuNavigation();
-    addDessertsContent();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     addContent();
+//     // setupNavigation();
+//     // setupMenuNavigation();
+//     addDessertsContent();
+// });
+
+addContent();
+// setupNavigation();
+// setupMenuNavigation();
+addDessertsContent();

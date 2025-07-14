@@ -1,0 +1,39 @@
+/* HOME PAGE - START*/
+#content > .home-images {
+    margin: 1rem 0rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#content > .home-images > img {
+    width: 20rem;
+    height: 15rem;
+}
+
+#content > #home-middle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#content > #home-middle > * {    
+    padding: 1.5rem 2rem;
+    letter-spacing: 0.1rem;
+}
+
+#content > #home-middle > h1 {
+    font-size: 3rem;
+}
+
+#content > #home-middle > p {
+    font-size: 1.7rem;    
+}
+
+#content > #home-middle > p:last-of-type {
+    font-weight: bold; 
+    letter-spacing: 0.2rem;
+}
+/* HOME PAGE - END */
+
+

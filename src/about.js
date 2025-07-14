@@ -3,6 +3,7 @@ import { setupNavigation } from './navigation.js';
 import imgChef from "./images/chef.jpeg";
 
 import './style.css';
+import './about.css';
    
 console.log("In about.js test message!");
 
@@ -133,7 +134,15 @@ function addContent() {
 
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    addContent();
-    setupNavigation(); 
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     addContent();
+//     setupNavigation(); 
+// });
+
+// addContent();
+// setupNavigation(); 
+
+setupNavigation(); 
+addContent();
+
+

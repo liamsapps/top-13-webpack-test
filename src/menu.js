@@ -2,6 +2,7 @@ import { setupNavigation } from './navigation.js';
 import { setupMenuNavigation } from './menuNavigation.js';
 
 import './style.css';
+import './menu.css';
 
 console.log("In menu.js test message!");
 
@@ -49,8 +50,18 @@ export function addContent() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    addContent();
-    setupNavigation();
-    setupMenuNavigation();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     addContent();
+//     setupNavigation();
+//     setupMenuNavigation();
+// });
+
+// addContent();
+// setupNavigation();
+// setupMenuNavigation();
+
+
+setupNavigation();
+addContent();
+setupMenuNavigation();
+

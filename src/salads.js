@@ -2,7 +2,8 @@
 // import { setupMenuNavigation } from './menuNavigation.js';
 import { addContent } from './menu.js';
 
-import './style.css';
+// import './style.css';
+// import './salads.css';
 
 console.log("In salads.js test message!");
 
@@ -148,18 +149,18 @@ function addSaladContent() {
     menuItems.appendChild(menuItem5);
     menuItems.appendChild(menuPrice5);
 
-    content.appendChild(menuItems);
-
-    // MENU NAV
-    // const menuNav = document.createElement("nav");
-    // menuNav.className = "menu-nav";
-
-    
+    content.appendChild(menuItems);   
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    addContent();
-    // setupNavigation();
-    // setupMenuNavigation();
-    addSaladContent();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     addContent();
+//     // setupNavigation();
+//     // setupMenuNavigation();
+//     addSaladContent();
+// });
+
+
+addContent();
+// setupNavigation();
+// setupMenuNavigation();
+addSaladContent();

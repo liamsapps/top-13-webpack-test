@@ -2,7 +2,7 @@
 // import { setupMenuNavigation } from './menuNavigation.js';
 import { addContent } from './menu.js';
 
-import './style.css';
+// import './style.css';
 
 console.log("In pizza.js test message!");
 
@@ -178,9 +178,14 @@ function addPizzaContent() {
 
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    addContent();
-    // setupNavigation();
-    // setupMenuNavigation();
-    addPizzaContent();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     addContent();
+//     // setupNavigation();
+//     // setupMenuNavigation();
+//     addPizzaContent();
+// });
+
+addContent();
+// setupNavigation();
+// setupMenuNavigation();
+addPizzaContent();

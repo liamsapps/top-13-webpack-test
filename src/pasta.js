@@ -2,7 +2,7 @@
 // import { setupMenuNavigation } from './menuNavigation.js';
 import { addContent } from './menu.js';
 
-import './style.css';
+// import './style.css';
 
 console.log("In pasta.js test message!");
 
@@ -178,9 +178,14 @@ function addPastaContent() {
     
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    addContent();
-    // setupNavigation();
-    // setupMenuNavigation();
-    addPastaContent();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     addContent();
+//     // setupNavigation();
+//     // setupMenuNavigation();
+//     addPastaContent();
+// });
+
+addContent();
+// setupNavigation();
+// setupMenuNavigation();
+addPastaContent();

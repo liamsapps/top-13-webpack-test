@@ -2,7 +2,7 @@
 // import { setupMenuNavigation } from './menuNavigation.js';
 import { addContent } from './menu.js';
 
-import './style.css';
+// import './style.css';
 
 console.log("In wine.js test message!");
 
@@ -81,9 +81,14 @@ function addWineContent() {
     
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    addContent();
-    // setupNavigation();
-    // setupMenuNavigation();
-    addWineContent();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     addContent();
+//     // setupNavigation();
+//     // setupMenuNavigation();
+//     addWineContent();
+// });
+
+addContent();
+// setupNavigation();
+// setupMenuNavigation();
+addWineContent();
