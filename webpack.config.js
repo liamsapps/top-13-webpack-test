@@ -90,26 +90,9 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
       concatenateModules: true, // Merges module scopes where possible
       runtimeChunk: 'single', // Extracts runtime code into a separate file
       minimizer: [new CssMinimizerPlugin()],
+      // NOTE: after removing 95% of optimization config, no change in page loading (revisit)
       splitChunks: {
-        chunks: 'all', // Split both sync and async chunks
-        minSize: 20000, // Minimum chunk size (20KB) before splitting
-        maxSize: 244000, // Try to split chunks larger than 244KB
-        minChunks: 1, // Minimum number of shared uses before splitting
-        maxAsyncRequests: 30, // Max async chunks per page
-        maxInitialRequests: 30, // Max initial chunks per page
-        automaticNameDelimiter: '~', // Separator for generated chunk names
-        cacheGroups: {
-          vendors: {
-            test: /[\\/]node_modules[\\/]/, // Group node_modules into a single chunk
-            priority: -10, // Higher priority than default
-            reuseExistingChunk: true // Avoid duplicate chunks
-          },
-          default: {
-            minChunks: 2, // Shared modules used at least twice
-            priority: -20, // Lower priority than vendors
-            reuseExistingChunk: true // Reuse existing chunks if possible
-          }
-        }
+        chunks: 'all', // Split both sync and async chunks        
       },
     },
  };
